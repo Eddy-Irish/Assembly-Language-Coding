@@ -8,8 +8,10 @@
 
 openingStr: .asciiz "Two values to be multiplied...\n"
 timesStr: .asciiz "   times   "
-multiplier:   .half   4    #int multiplier
-multiplicand: .half   5    #int multiplicand
+multiplier:           .half   4    #int multiplier
+multiplicand:         .half   5    #int multiplicand
+Syscall_PrintString:  .word 4
+Syscall_PrintInt:     .word 1
 
 
 
@@ -20,7 +22,7 @@ multiplicand: .half   5    #int multiplicand
 
 main:  
    
-    li $v0, 4
+    lw $v0, Syscall_PrintString
     la $a0, openingStr            #prints first string
     syscall
     
@@ -34,7 +36,7 @@ main:
     syscall
     
     lh $t1, multiplicand
-    li $v0, 1
+    lw $v0, Syscall_PrintInt
     move $a0, $t1
     syscall                       #prints multiplicand
     
