@@ -1,6 +1,16 @@
-# Demo
-#
-# Filename : LoadImmediate
+#########################################################################
+# Keegan O'Hara                                                         #
+# Problem 1, CS 121 MIPS Homework                                       #
+#                                                                       #
+#                                                                       #
+# This program takes two integers as specified in the hard-coded .data  #
+#  variables, first prints them out, multiplies them and then           #
+#  print the result.  As long as the integer can be specified in        #
+#  binary in 16-bits or less, the progrman runs for any variable        #
+#  you wish to hard-code...the code is not dependent on the values      #
+#  I have provided in the example                                       #
+#                                                                       #
+######################################################################### 
 
 	
 
@@ -9,7 +19,7 @@
 openingStr: .asciiz "Two values to be multiplied...\n"
 timesStr: .asciiz "   times   "
 equalsStr: .asciiz "\nEquals : "
-multiplier:           .half   5    #int multiplier
+multiplier:           .half   4    #int multiplier
 multiplicand:         .half   5    #int multiplicand
 Syscall_PrintString:  .word 4
 Syscall_PrintInt:     .word 1
