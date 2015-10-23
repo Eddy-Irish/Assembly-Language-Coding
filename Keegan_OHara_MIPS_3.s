@@ -12,23 +12,27 @@ text: .asciiz "Enter a string to be reversed: "
 
 .text
 
-    li      $v0, 4          # prints text string
+    # Prints out input string
+    li      $v0, 4          
     la      $a0, text
     syscall
     
+    
+    # Allocates space on the stack
     addiu $sp, $sp, -140
 
     li      $v0, 8          # text is assigned to the inputted string
-    la      $a0, text
-    li      $a1, 256        # size of input buffer
+    move    $a0, $sp
+    li      $a1, 140        # size of input buffer
     syscall
 
-    la      $t0, text       # addr = text
+    move    $t0, $sp       # addr = text
     move    $t2, $t0        # orig = addr (backup of original address)
-find:   lb      $t1, 0($t0)     # tmp = *addr
+
+findEnd:   lb      $t1, 0($t0)     # tmp = *addr
     beq     $t1, 0, print   # while(tmp != NUL)
     addi    $t0, $t0, 1     # addr++
-    j       find            # (end loop)
+    j       findEnd            # (end loop)
 
 print:  addi    $t0, $t0, -1     # --addr
     blt     $t0, $t2, end   # while (addr >= orig)
