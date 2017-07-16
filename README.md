@@ -1,6 +1,5 @@
 # cs121_ComputerOrganization
-Files for UVM CS 121:  Assembly language, hardware, computer organization etc..
 
-http://jjc.hydrus.net/cs61c/handouts/loops4.pdf               -->  A good site that deals with loops in MIPS
+These Files are some work that I've done with Assembly languages as a part of a class on Computer Hardware and Architecture I took.
 
 http://www.mrc.uidaho.edu/mrc/people/jff/digital/MIPSir.html  -->  MIPS instructions reference
