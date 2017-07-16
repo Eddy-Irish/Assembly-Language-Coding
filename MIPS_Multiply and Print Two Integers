@@ -1,14 +1,12 @@
 #########################################################################
 # Keegan O'Hara                                                         #
-# Problem 1, CS 121 MIPS Homework                                       #
 #                                                                       #
 #                                                                       #
 # This program takes two integers as specified in the hard-coded .data  #
 #  variables, first prints them out, multiplies them and then           #
 #  print the result.  As long as the integer can be specified in        #
-#  binary in 16-bits or less, the progrman runs for any variable        #
-#  you wish to hard-code...the code is not dependent on the values      #
-#  I have provided in the example                                       #
+#  binary in 16-bits or less, the program runs for any variable         #
+#  you wish to hard-code.                                               #
 #                                                                       #
 ######################################################################### 
 
